@@ -19,15 +19,13 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        working-directory: science-island-docs
         run: npm install
 
       - name: Build site
-        working-directory: science-island-docs
         run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.ACCESS_TOKEN }}
           publish_dir: ./build
