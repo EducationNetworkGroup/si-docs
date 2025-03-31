@@ -1,1 +1,3 @@
-# science-island-docs
+# si-docs
+
+Documentation for the Science Island project.
