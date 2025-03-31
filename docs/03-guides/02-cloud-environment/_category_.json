@@ -1,0 +1,8 @@
+{
+    "label": "Cloud Environment",
+    "position": 2,
+    "link": {
+        "type": "generated-index",
+        "description": "Steps to configure your machine to gain access to cloud infrastructure"
+    }
+}

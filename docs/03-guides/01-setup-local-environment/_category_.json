@@ -1,0 +1,8 @@
+{
+    "label": "Setup Local Environment",
+    "position": 1,
+    "link": {
+        "type": "generated-index",
+        "description": "Steps to create a local developer environment of Science Island"
+    }
+}

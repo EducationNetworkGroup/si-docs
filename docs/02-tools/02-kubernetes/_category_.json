@@ -1,0 +1,7 @@
+{
+    "label": "Kubernetes (k8s)",
+    "position": 2,
+    "link": {
+        "type": "generated-index"
+    }
+}

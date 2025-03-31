@@ -2,10 +2,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-const Discord = 'https://discord.com/channels/1350984587148525579/1350984587664294005'
 const GitHubEnterprise = 'https://github.com/EducationNetworkGroup'
-const GitHubRepo = 'https://matthewleigh.github.io'
-const EditUrl = 'https://github.com/MatthewLeigh/science-island-docs/tree/main/science-island-docs'
+const GitHubRepo = 'https://educationnetworkgroup.github.io'
+const EditUrl = 'https://github.com/EducationNetworkGroup/si-docs/tree/main'
 const Website = 'https://scienceisland.com/#/'
 const Game = 'https://scienceisland.com/main.php#/'
 const TeachersPortal = 'https://platform.scienceisland.com/'
@@ -19,9 +18,9 @@ const config: Config = {
     favicon: 'img/favicon.ico',
 
     url: GitHubRepo,
-    baseUrl: '/science-island-docs/',
-    organizationName: 'MatthewLeigh',
-    projectName: 'science-island-docs',
+    baseUrl: '/',
+    organizationName: 'EducationNetworkGroup',
+    projectName: 'si-docs',
     deploymentBranch: "gh-pages",
     trailingSlash: false,
     onBrokenLinks: 'throw',
@@ -87,11 +86,6 @@ const config: Config = {
                     position: 'left',
                 },
                 {
-                    label: 'Discord',
-                    href: Discord,
-                    position: 'right',
-                },
-                {
                     label: 'GitHub',
                     href: GitHubEnterprise,
                     position: 'right',
@@ -118,10 +112,6 @@ const config: Config = {
                 {
                     title: 'Tools & Resources',
                     items: [
-                        {
-                            label: 'Discord',
-                            href: Discord,
-                        },
                         {
                             label: 'GitHub',
                             href: GitHubEnterprise,
