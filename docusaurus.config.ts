@@ -18,7 +18,7 @@ const config: Config = {
     favicon: 'img/favicon.ico',
 
     url: GitHubRepo,
-    baseUrl: '/si-docs',
+    baseUrl: '/si-docs/',
     organizationName: 'EducationNetworkGroup',
     projectName: 'si-docs',
     deploymentBranch: "gh-pages",
