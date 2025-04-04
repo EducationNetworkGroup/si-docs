@@ -8,28 +8,7 @@ This documentation website was made using [Docusaurus](https://docusaurus.io/doc
 
 ---
 
-## Directory Structure
-
-```bash
-| docs                          # Markdown documentation organized by sections
-| ├── 01-overview.md            # High-level intro to the documentation or project
-| ├── 02-tools/                 # Documentation for tools used in the project
-| │   ├── _category_.json       # Sidebar config: label + order for the 'tools' section
-| │   └── [tool].md             # Tool-specific documentation
-| ├── 03-guides/                # How-to guides and tutorials
-| │   ├── _category_.json       # Sidebar config: label + order for the 'guides' section
-| │   └── [guide].md            # Guide-specific documentation
-|
-| projects/                     # Project-specific docs or assets
-| └── [project folders]         # Content related to individual projects (optional)
-|
-| src/                          # React components or custom pages
-| static/                       # Static assets (e.g., images, PDFs, favicons)
-| docusaurus.config.ts          # Main config file (site name, theme, navbar, plugins)
-| sidebars.ts                   # Controls sidebar structure (if not using `_category_.json`)
-```
-
-### Documentation
+## Documentation Structure
 
 Markdown documents can be added to the `docs` of `projects` folders to the website to contribute to the documentation. Each folder serves a distinct purpose:
 
