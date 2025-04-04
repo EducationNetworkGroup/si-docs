@@ -2,10 +2,9 @@
 sidebar_position: 3
 ---
 
-# Branching
+# Commits
 
-Commits submitted within the project must adhere to the following message format:
-
+Commits submitted within the project must adhere to the following message format
 ```sh
 [type]: subject
 [line break]
@@ -14,14 +13,14 @@ body (optional)
 
 ## Type (lowercase, required)
 
-- feat: Add or remove functionality
-- fix: Fix bugs from prior commits
-- refactor: Restructure or rewrite code
-- style: Code styling/formatting (e.g. white-space, missing semicolons)
-- test: Add or update tests
-- docs: Documentation changes
-- build: Affect build components (e.g. CI pipeline, project dependencies)
-- misc: Other changes not covered above
+- **feat:** Add or remove functionality
+- **fix:** Fix bugs from prior commits
+- **refactor:** Restructure or rewrite code
+- **style:** Code styling/formatting (e.g. white-space, missing semicolons)
+- **test:** Add or update tests
+- **docs:** Documentation changes
+- **build:** Affect build components (e.g. CI pipeline, project dependencies)
+- **misc:** Other changes not covered above
 
 ## Subject (required)
 
