@@ -3,121 +3,14 @@ sidebar_position: 1
 ---
 
 # The Basics
+
+## Prereq
 ---
-## Pulumi (Infrastructure as Code)
+- See [Setting up Pulumi](../../03-guides/01-setup-local-environment/05-pulumi.md) to setup Pulumi, and get the details of the cloud environment.
+- Ensure you have created an account via AWS IAM within the Pulumi Project
 
-Pulumi lets you define reusable building blocks known as "component resources." These are like your typical cloud resources but bundled with additional logic. If you are familiar with Terraform, these would be your modules.
-
-### Install
-#### macOS (using Homebrew)
-
-```bash
-brew install pulumi
-```
-
-#### Linux
-
-Use the install script:
-
-```bash
-curl -fsSL https://get.pulumi.com | sh
-```
-
-Then add Pulumi to your PATH (add this to your `.bashrc` or `.zshrc`):
-
-```bash
-export PATH="$PATH:$HOME/.pulumi/bin"
-```
-
-Reload your terminal:
-
-```bash
-source ~/.bashrc
-# or
-source ~/.zshrc
-```
-
-#### Windows
-
-Download and install Pulumi from the [official installer](https://www.pulumi.com/docs/get-started/install/#windows).
-
----
-
-### Log into Pulumi
-
-Log in to your Pulumi account (either Pulumi Cloud or self-hosted backend):
-
-```bash
-pulumi login
-```
-
-For self-hosted backend:
-
-```bash
-pulumi login s3://si-iac-state/si-pulumi/
-
-# IAM module
-pulumi login s3://si-iac-state/si-iam/
-```
-
----
-
-### Initialize Existing Project
-
-Navigate to your existing Pulumi project directory and initialize:
-
-```bash
-cd si-infrastructure
-pulumi stack select prod
-```
-
-If the stack does not exist yet, create it:
-
-```bash
-pulumi stack init <your-stack-name>
-```
-
----
-
-### Configure Your Stack
-
-Get & Set necessary configuration values (example):
-
-```bash title='Can be found in Pulumi.<stack>.yaml'
-pulumi config get aws-region
-pulumi config set someKey someValue --secret
-```
-
----
-
-### Additional Commands
-
-- View stack status:
-
-```bash
-pulumi stack
-```
-
-- View outputs:
-
-```bash
-pulumi stack output
-```
-
-- Tear down stack resources:
-
-```bash
-pulumi destroy
-```
-
----
-
-You're now set up to manage your infrastructure using Pulumi!
-
-
----
 ## Install AWS CLI
-
+---
 ### On macOS (using Homebrew)
 
 ```bash
