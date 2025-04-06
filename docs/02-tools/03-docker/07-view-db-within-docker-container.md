@@ -4,7 +4,7 @@ sidebar_position: 7
 
 # View Database within a Docker Container
 
-This guide provides an overview of how to view a Postgres of MySQL database running within a container via the CLI without exposing the port.
+This guide provides an overview of how to view a `Postgres` or `MySQL` database running within a container via the CLI *without exposing the port*.
 
 ---
 
