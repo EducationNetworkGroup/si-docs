@@ -10,22 +10,25 @@ This guide provides an overview of how to view a `Postgres` or `MySQL` database 
 
 ## Postgres
 
-You will need three pieces of information before we start:
+You will need four pieces of information before we start:
 
 1. The name of the container. In this example, the name is `postgres-db`.
 2. The name of the database user. In this it is `username`.
-3. The password of the database user. In this it is `password`. 
+3. The password of the database user. In this example, it's `password`.
+4. The name of the database. In this example, the name is `db-name`.
 
 > The easiest way to find the name of the container is by running `docker ps` once the containers are running. 
-
+>
 > The username and password can generally be found in the `docker-compose.yml`, `Dockerfile`, or `.env` file.
 
 From the terminal, run:
 
 ```bs
 docker exec -it postgres-db sh
-psql -U username -d password
+psql -U username -d db-name
 ```
+
+Enter the password if you are prompted.
 
 To verify it worked, run `\dt` to view the tables.
 
@@ -41,16 +44,17 @@ You will need four pieces of information before we start:
 4. The name of the database. In this example, the name is `db-name`.
 
 > The easiest way to find the name of the container is by running `docker ps` once the containers are running.
-
+>
 > The username and password can generally be found in the `docker-compose.yml`, `Dockerfile`, or `.env` file.
 
 From the terminal, run:
 
 ```bs
-docker exec -it mysql-db -u username -p
+docker exec -it mysql-db sh
+mysql -u username -p
 ```
 
-You will then be prompted to enter your password.
+Enter the password if you are prompted.
 
 Next, enter the following to set the database.
 
