@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # The Basics
 
-You can get an application up and running on your computer. Great! But what happens when you need to run it on another machine — maybe a server, a teammate’s laptop, or a cloud environment? You could use a virtual machine (VM), which emulates an entire operating system, but VMs are bulky, slow to start, and consume a lot of resources. This is where Docker comes in. Instead of virtualizing an entire OS, Docker containers share the host system’s kernel while keeping applications and their dependencies isolated. This makes containers lightweight, fast to start, and highly portable, ensuring your application runs the same way everywhere — without the overhead of traditional VMs.
+This guide provides an introduction to installing and using `Docker`.
 
 
 ## Getting Started
