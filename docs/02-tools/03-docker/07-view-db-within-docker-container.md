@@ -58,4 +58,4 @@ Next, enter the following to set the database.
 USE db-name;
 ```
 
-To verify it worked, run `SHOW TABLES` to view the tables.
+To verify it worked, run `SHOW TABLES;` to view the tables.
