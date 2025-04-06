@@ -8,7 +8,7 @@ const EditUrl = 'https://github.com/EducationNetworkGroup/si-docs/tree/main'
 const Website = 'https://scienceisland.com/#/'
 const Game = 'https://scienceisland.com/main.php#/'
 const TeachersPortal = 'https://platform.scienceisland.com/'
-const CurriculumMapper = '/' /* Pending */
+const CurriculumMapper = 'https://mapper.scienceisland.com/login'
 const AWS = '/' /* Pending */
 const KeyCloak = '/' /* Pending */
 
