@@ -20,7 +20,7 @@ sidebar_position: 1
 | `html/`                      | Additional HTML files for the Unity WebGL build.                                               |
 | `keycloak-deployment/`       | Configuration files for Keycloak deployment (if used for authentication).                      |
 | `readmeImages/`              | Images used in the README documentation.                                                       |
-| `resources/`                 | Additional resources or configuration files for the project.                                   |
+| `resources/`                 | Additional resources or configuration files for the project (Contains previous team's sprint reports|
 | `scripts/`                   | Utility scripts for deployment, testing, or setup.                                             |
 | `Unity/`                     | Contains Unity project files, including assets and build configurations for the Science Island game. |
 | `Website/`                   | Main website folder containing the frontend and backend code.
