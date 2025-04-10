@@ -8,7 +8,7 @@ sidebar_position: 1
 
 ## Installation
 
-Docker Compose is installed automatically when you install the `Docker Desktop` app. Please follow the steps in [Docker: The Basics](../../docker/01-the-basics.md) if you haven't already set up Docker Desktop.
+Docker Compose is installed automatically when you install the `Docker Desktop` app. Please follow the steps in [Docker: The Basics](../../03-docker/01-the-basics.md) if you haven't already set up Docker Desktop.
 
 You can check the version of Docker Compose by running the following command.
 
