@@ -62,3 +62,17 @@ locahost:8000
 ```
 
 and the Science Island Website and Game should be running locally.
+
+## Accessing Science Island Database usiing phpMyAdmin
+
+1. Start Apache and MySQL
+2. Navigate to
+```txt
+http://localhost/dashboard/
+```
+3.Click on phpMyAdmin
+4.Click on databases tab
+5.Create a database name science_island with a collation type "utf_general_ci"
+6.Navigate to import tab, selecct the "science_island.sql" (ScienceIslandWebsite/Website/database/scienceisland.sql) database script, ensure the character is set to utf-8 then hit import
+7.A new science_island database will appear on the left
+
