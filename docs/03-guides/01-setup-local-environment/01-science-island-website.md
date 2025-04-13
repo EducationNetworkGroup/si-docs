@@ -20,7 +20,7 @@ sidebar_position: 1
 | `html/`                      | Additional HTML files for the Unity WebGL build.                                               |
 | `keycloak-deployment/`       | Configuration files for Keycloak deployment (if used for authentication).                      |
 | `readmeImages/`              | Images used in the README documentation.                                                       |
-| `resources/`                 | Additional resources or configuration files for the project (Contains previous team's sprint reports|
+| `resources/`                 | Additional resources or configuration files for the project (contains previous team's sprint reports).|
 | `scripts/`                   | Utility scripts for deployment, testing, or setup.                                             |
 | `Unity/`                     | Contains Unity project files, including assets and build configurations for the Science Island game. |
 | `Website/`                   | Main website folder containing the frontend and backend code.
@@ -31,12 +31,12 @@ sidebar_position: 1
 | `ScienceIslandKeyPair.pem`   | Key pair for secure access to AWS or other services.                                           |
 | `appspec.yml`                | AWS CodeDeploy configuration for deploying the project to an EC2 instance.                     |
 
----  
+---
 
 ## Local Development Without using XAMPP
 
 Navigate to the Science Island Website Directory
- 
+
 ```shell
 cd ScienceIslandWebsite
 ```
@@ -63,16 +63,15 @@ locahost:8000
 
 and the Science Island Website and Game should be running locally.
 
-## Accessing Science Island Database usiing phpMyAdmin
+## Accessing Science Island Database using phpMyAdmin
 
 1. Start Apache and MySQL
 2. Navigate to
 ```txt
 http://localhost/dashboard/
 ```
-3.Click on phpMyAdmin
-4.Click on databases tab
-5.Create a database name science_island with a collation type "utf_general_ci"
-6.Navigate to import tab, selecct the "science_island.sql" (ScienceIslandWebsite/Website/database/scienceisland.sql) database script, ensure the character is set to utf-8 then hit import
-7.A new science_island database will appear on the left
-
+3. Click on phpMyAdmin
+4. Click on databases tab
+5. Create a database name science_island with a collation type "utf_general_ci"
+6. Navigate to import tab, select the "science_island.sql" (ScienceIslandWebsite/Website/database/scienceisland.sql) database script, ensure the character is set to utf-8 then hit import
+7. A new science_island database will appear on the left
