@@ -33,6 +33,3 @@ sidebar_position: 99
 | `Control Plane`  | The management layer that makes global decisions about the cluster, such as scheduling workloads and responding to events-ensuring the cluster operates as intended. |
 
 > A [Full Glossary](https://kubernetes.io/docs/reference/glossary/?all=true) of terms is provided in the Official Kubernetes Docs.
-
----
-
