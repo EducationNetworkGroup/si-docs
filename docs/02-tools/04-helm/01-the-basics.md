@@ -50,6 +50,3 @@ Let's take a quick look at what everything does.
 | `templates/service.yaml`         | Recommended | Exposes pods via a Kubernetes Service. |
 | `templates/serviceaccount.yaml`  | No          | If required, defines the service account that the app should run as. |
 | `templates/tests folder`         | No          | Contains Helm test hooks to verify that the chart works. |
-
-## Installing Helm
-
