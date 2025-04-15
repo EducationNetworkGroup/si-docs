@@ -3,8 +3,7 @@ sidebar_position: 1
 ---
 
 # The Basics
-
-This guide provides an introduction to `KeyCloak` and its role in Science Island.
+This guide provides an introduction to `KeyCloak`, its fundamental concepts/tools, and the role it plays in Science Islands architecture.
 
 ## What is KeyCloak?
 KeyCloak is an open-source identity and access management solution designed to provide authentication, authorization and user management for modern applications and services. KeyCloak offers features such as Single Sign-On, which allows users to log into once for access across multiple applications. Through the use of an Admin Console and REST APIs, it allows flexible configuration and management of users, roles and permissions.
