@@ -49,9 +49,12 @@ cd src
 docker-compose up -d --build frontend
 ```
 
-3. To run the backend, change the directory to /src/backend then run the following command:
+3. To run the backend, change the directory to /src/backend then run the following commands:
 
 ```shell
 docker build -t backend
+```
+
+```shell
 docker run -d -p 8088:8088 backend
 ```
