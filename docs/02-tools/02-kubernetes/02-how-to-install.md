@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# The Basics
+# How to Install
 ## Install `kubectl` 
 
 This guide provides detailed steps for downloading and installing both the Kubernetes CLI tool (`kubectl`) and the AWS CLI.
