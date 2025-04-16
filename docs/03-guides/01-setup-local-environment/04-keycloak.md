@@ -1,17 +1,11 @@
 ---
 sidebar_position: 3
-description: Local deployment for the si-auth-service repository.
+description: Understand and deploy the si-auth-service repository.
 ---
 
 # KeyCloak (si-auth-service)
 
-## Prerequisites
-
-- [Docker](https://www.docker.com/products/docker-desktop)
-
-## Implementation
-
-The SI Auth Service uses Keycloak for identity management and PostgreSQL as its backend database. Docker Compose is used to run all services locally. Caddy provides HTTPS via reverse proxy, and Keycloakify is used for theming the login UI.
+The `si-auth-service` repository uses Keycloak for identity management and PostgreSQL as its backend database. Docker Compose is used to run all services locally. Caddy provides HTTPS via reverse proxy, and Keycloakify is used for theming the login UI.
 
 ## Folder Structure
 
@@ -22,34 +16,24 @@ The SI Auth Service uses Keycloak for identity management and PostgreSQL as its 
 | `realms/`             | JSON file defining the default Keycloak realm setup           |
 | `Dockerfile`          | Builds the customized Keycloak container                      |
 | `docker-compose.yml`  | Sets up the full service stack locally                        |
-| `helm/`               | Kubernetes deployment using Helm charts (optional)            |
+| `helm/`               | Kubernetes deployment using Helm charts                       |
 
+## Local Deployment Guide
 
-## Running the Auth Service Locally
+### Prerequisites
 
-Navigate to the SI Auth Service directory:
+- [Docker](../../02-tools/03-docker/01-the-basics.md)
 
-```bash
-cd si-auth-service-main
-```
+### Build & Run
 
-Run Docker Compose:
-
-```bash
-docker compose build --pull --no-cache
-```
-
-Run:
+To build and run the service locally, run the following command.
 
 ```bash
-docker compose up -d
+docker compose up -d --build
 ```
 
-Once it's running, go to your web browser and type in:
+You can then access the deployment at http://localhost.
 
-```txt
-localhost:8443
-```
+Note that *you may need to wait a couple of minutes* after running the command before the images are set up and you can access the service.
 
-
-
+You can watch the logs for the `keycloak` container until you see the log for `Installed features:...`. Once you see that, everything should be ready and working.
