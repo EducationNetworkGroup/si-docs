@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: Local deployment for the ScienceIslandWebsite repository.
 ---
 
 # Science Island Website

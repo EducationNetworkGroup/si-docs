@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-description: Understand and deploy the si-auth-service repo.
+description: Understand and deploy the si-auth-service repository.
 ---
 
 # KeyCloak (si-auth-service)

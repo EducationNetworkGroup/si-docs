@@ -1,5 +1,6 @@
 ---
 sidebar_position: 5
+description: Access a database image from the CLI.
 ---
 
 # View Database within a Docker Container

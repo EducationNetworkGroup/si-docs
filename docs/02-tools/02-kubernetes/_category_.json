@@ -2,6 +2,7 @@
     "label": "Kubernetes (k8s)",
     "position": 2,
     "link": {
-        "type": "generated-index"
+        "type": "generated-index",
+        "description": "\"Kubernetes is a portable, extensible, open source platform for managing containerized workloads and services, that facilitates both declarative configuration and automation.\" Okay... but what does that actually mean? This sections answers that question by providing an overview of Kubernetes, how it fits into a system architecture, and some basics commands for working with it."
     }
 }

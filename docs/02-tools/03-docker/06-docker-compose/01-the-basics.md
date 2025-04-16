@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: Installing Docker Compose.
 ---
 
 # The Basics

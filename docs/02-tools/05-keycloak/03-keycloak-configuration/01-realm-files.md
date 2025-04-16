@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: Detailed description of the Science Island Realm.
 ---
 
 # Realm Files

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: Understand the Helm Chart structure.
 ---
 
 # The Basics
