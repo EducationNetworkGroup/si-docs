@@ -2,6 +2,7 @@
     "label": "Tools",
     "position": 1,
     "link": {
-        "type": "generated-index"
+        "type": "generated-index",
+        "description": "The Tools section serves as a guide for learning the tools, technologies, and services that Science Island is built upon. Whether you're setting up your local environment, working with containerized services, managing authentication, or integrating external platforms, this section offers detailed documentation to help you get started quickly and work efficiently."
     }
 }

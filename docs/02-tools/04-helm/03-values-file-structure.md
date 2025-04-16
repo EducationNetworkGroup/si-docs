@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+description: Detailed breakdown of what you will see in a values.yaml file.
 ---
 
 # values.yaml File Structure

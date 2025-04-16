@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+description: Detailed breakdown of what you will see in a Chart.yaml file.
 ---
 
 # Chart.yaml File Structure

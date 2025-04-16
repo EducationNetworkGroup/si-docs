@@ -1,5 +1,6 @@
 ---
 sidebar_position: 99
+description: Temporary file with notes taken while learning Helm.
 ---
 
 # Kubernetes Temp

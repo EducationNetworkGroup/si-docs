@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+description: Create and deploy and custom image on your local machine.
 ---
 
 # Deploy Custom Image Locally

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: How to structure your documents.
 ---
 
 # The Basics
