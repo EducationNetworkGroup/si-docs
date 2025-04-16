@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+description: Naming conventions for branches.
 ---
 
 # Branching

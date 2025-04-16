@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+description: Local deployment for the si-infrastructure repository.
 ---
 
 # Setting up Pulumi (si-infrastructure)

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+description: Understand the key AWS services used within Science Island.
 ---
 
 # AWS Usage

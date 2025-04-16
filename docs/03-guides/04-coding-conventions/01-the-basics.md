@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: An overview of best practices.
 ---
 
 # The Basics

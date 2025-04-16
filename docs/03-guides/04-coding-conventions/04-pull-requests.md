@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+descriptions: Conventions and best practices for pull requests.
 ---
 
 # Pull Requests

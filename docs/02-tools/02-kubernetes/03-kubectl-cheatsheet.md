@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: Key CLI commands for Kubernetes.
 ---
 
 # Kubectl Cheatsheet

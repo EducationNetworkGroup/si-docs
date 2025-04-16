@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+description: Local deployment for the Platform repository.
 ---
 
 # Teacher Portal (Platform)

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: Installation steps for Kubernetes.
 ---
 
 # How to Install

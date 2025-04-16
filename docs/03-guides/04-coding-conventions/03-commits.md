@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+description: Conventions for consistent and clear commit messages.
 ---
 
 # Commits

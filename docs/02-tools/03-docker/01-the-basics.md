@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: Install Docker and learn the basic terminology and commands.
 ---
 
 # The Basics

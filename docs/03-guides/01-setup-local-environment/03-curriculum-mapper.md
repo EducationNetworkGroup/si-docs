@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+description: Local deployment for the Mapping-System repository.
 ---
 
 # Curriculum Mapper (Mapping-System)

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+description: Local deployment for the si-auth-service repository.
 ---
 
 # KeyCloak (si-auth-service)

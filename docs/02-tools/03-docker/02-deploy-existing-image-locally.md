@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+description: Deploy an existing image within a container on your local machine.
 ---
 
 # Deploy Existing Image Locally

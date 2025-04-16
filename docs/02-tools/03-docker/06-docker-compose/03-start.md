@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+description: Using Docker Compose in the CLI.
 ---
 
 # Using Docker Compose

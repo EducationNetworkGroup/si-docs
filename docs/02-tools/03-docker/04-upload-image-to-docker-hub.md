@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+description: Upload your custom image to Docker Hub.
 ---
 
 # Upload Image to Docker Hub
