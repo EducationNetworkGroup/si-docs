@@ -9,8 +9,8 @@ const Website = 'https://scienceisland.com/#/'
 const Game = 'https://scienceisland.com/main.php#/'
 const TeachersPortal = 'https://platform.scienceisland.com/'
 const CurriculumMapper = 'https://mapper.scienceisland.com/login'
-const AWS = '/' /* Pending */
-const KeyCloak = '/' /* Pending */
+const AWS = 'https://051826723308.signin.aws.amazon.com/console'
+const KeyCloak = 'https://login.scienceisland.com/'
 
 const config: Config = {
     title: 'Science Island',
