@@ -43,14 +43,14 @@ const config: Config = {
                     editUrl: EditUrl,
                 },
                 blog: {
-                    path: 'projects',
-                    routeBasePath: 'projects',
+                    path: 'blog',
+                    routeBasePath: 'blog',
                     showReadingTime: false,
                     showLastUpdateTime: false,
                     showLastUpdateAuthor: false,
                     editUrl: EditUrl,
-                    blogTitle: 'Student Projects',
-                    blogDescription: 'Overview of work completed on Science Island by student teams.',
+                    blogTitle: 'One-off guides.',
+                    blogDescription: 'One-off guides to help teams do specific tasks or coordinate outside of the codebase.',
                     blogSidebarCount: 'ALL',
                 },
                 theme: {
@@ -81,8 +81,8 @@ const config: Config = {
                     position: 'left',
                 },
                 {
-                    label: 'Projects',
-                    to: '/projects',
+                    label: 'Blog',
+                    to: '/blog',
                     position: 'left',
                 },
                 {
@@ -104,8 +104,8 @@ const config: Config = {
                             to: '/',
                         },
                         {
-                            label: 'Projects',
-                            to: '/projects',
+                            label: 'blog',
+                            to: '/blog',
                         }
                     ],
                 },
