@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://educationnetworkgroup.github.io/si-docs/blog</id>
+    <title>Science Island Blog</title>
+    <updated>2025-04-25T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://educationnetworkgroup.github.io/si-docs/blog"/>
+    <subtitle>Science Island Blog</subtitle>
+    <icon>https://educationnetworkgroup.github.io/si-docs/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Jira Project Board Management]]></title>
+        <id>https://educationnetworkgroup.github.io/si-docs/blog/jira-project-board-management</id>
+        <link href="https://educationnetworkgroup.github.io/si-docs/blog/jira-project-board-management"/>
+        <updated>2025-04-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Instructions and best practices for using the teams Jira project board.]]></summary>
+        <content type="html"><![CDATA[<p>I think that we can all agree that <strong>GitHub Project Boards</strong> aren't the most intuitive thing in the world. Going in to Sprint Two, where having a clear way to plan and track tasks will become more important, we'll be making the change to <strong>Jira</strong> to help keep things organized.</p>
+<p>This blog provides instructions and best practices for contributing to our new project board to ensure that it stays neat and useful throughout the remainder of the project.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-basics">The Basics<a href="https://educationnetworkgroup.github.io/si-docs/blog/jira-project-board-management#the-basics" class="hash-link" aria-label="Direct link to The Basics" title="Direct link to The Basics">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="design-philosophy">Design Philosophy<a href="https://educationnetworkgroup.github.io/si-docs/blog/jira-project-board-management#design-philosophy" class="hash-link" aria-label="Direct link to Design Philosophy" title="Direct link to Design Philosophy">​</a></h3>
+<ul>
+<li><strong>Simplicity</strong>: This time around we are starting with the minimum viable implementation. That means that things like connecting to GitHub Issues won't be included here.</li>
+<li><strong>Readability</strong>: The default for all decisions is whatever makes things easier to read and understand.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="terminology">Terminology<a href="https://educationnetworkgroup.github.io/si-docs/blog/jira-project-board-management#terminology" class="hash-link" aria-label="Direct link to Terminology" title="Direct link to Terminology">​</a></h3>
+<ul>
+<li><strong>Sprint</strong>: Refers to the 3-week blocks that the university has assigned for us.</li>
+<li><strong>Sub-Sprint</strong>: Refers to the smaller groups of tasks that occur within each Sprint (E.g., planning, demonstration preparation, etc).</li>
+<li><strong>Task</strong>: Refers to a single, actionable item that contributes to the completion of a sub-sprint. Tasks should be specific, measurable, and achievable within the sprint duration.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="timeline">Timeline<a href="https://educationnetworkgroup.github.io/si-docs/blog/jira-project-board-management#timeline" class="hash-link" aria-label="Direct link to Timeline" title="Direct link to Timeline">​</a></h2>
+<p>The timeline is our main view for an overview of how everything fits together. You can expand each sub-sprint to see the tasks. The timeline looks best when set to <code>Weeks</code> view.</p>
+<p><img decoding="async" loading="lazy" alt="Jira Timeline" src="https://educationnetworkgroup.github.io/si-docs/assets/images/2025-25-04-jira-timeline-c544e3db660feb6640542dc2c1acb7bb.png" width="1921" height="1135" class="img_ev3q"></p>
+<blockquote>
+<p><em>This sections is primarily used for viewing tasks. To keep things consistent, only the <code>site admin</code> should be editing things here.</em></p>
+</blockquote>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="colour-chart">Colour Chart<a href="https://educationnetworkgroup.github.io/si-docs/blog/jira-project-board-management#colour-chart" class="hash-link" aria-label="Direct link to Colour Chart" title="Direct link to Colour Chart">​</a></h3>
+<table><thead><tr><th>Colour</th><th>Meaning</th></tr></thead><tbody><tr><td>Dark Grey</td><td>Represents the Sprint. This is used purely to visualize the duration of each sprint. No tasks should be assigned to this Epic.</td></tr><tr><td>Dark Purple</td><td>Sprint Planning.</td></tr><tr><td>Dark Green</td><td>Demonstration Preparation.</td></tr><tr><td>Dark Orange (Dark Yellow)</td><td>Sprint Retrospective and Report Writing.</td></tr><tr><td>Anything Else</td><td>Non-Recurring Sub-Sprints.</td></tr></tbody></table>
+<blockquote>
+<p><em>Note: We use the Dark Grey Epics to show the sprint durations because the free version of Jira doesn't allow for the three layers that we need to represent [ Sprint / Sub-Sprint / Task ].</em></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="backlog">Backlog<a href="https://educationnetworkgroup.github.io/si-docs/blog/jira-project-board-management#backlog" class="hash-link" aria-label="Direct link to Backlog" title="Direct link to Backlog">​</a></h2>
+<p>This is where we create and manage all the tasks.</p>
+<p><img decoding="async" loading="lazy" alt="Jira Backlog" src="https://educationnetworkgroup.github.io/si-docs/assets/images/2025-25-04-jira-backlog-57a5c1831f198214169d1eaed4b12c2a.png" width="1090" height="910" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="add-task">Add Task<a href="https://educationnetworkgroup.github.io/si-docs/blog/jira-project-board-management#add-task" class="hash-link" aria-label="Direct link to Add Task" title="Direct link to Add Task">​</a></h3>
+<p>Tasks represent small activities that need to be completed as part of a sub-sprint.</p>
+<p>To add a task to the project board, follow these steps.</p>
+<ol>
+<li><strong>Expand the sprint you want to add a task to.</strong>
+<ul>
+<li>If an appropriate sprint hasn't been created yet, add the task to <code>Backlog</code>.</li>
+</ul>
+</li>
+<li><strong>Click <code>+ Create</code>.</strong></li>
+<li><strong>Write a description of the task and click enter.</strong>
+<ul>
+<li>Keep task descriptions under 80 characters long.</li>
+</ul>
+</li>
+<li><strong>Click on the newly created task.</strong>
+<ul>
+<li>A side panel will open for you to add further details.</li>
+</ul>
+</li>
+<li><strong>Add the following information.</strong>
+<ul>
+<li><code>Description</code> (if required).</li>
+<li><code>Assignee</code> (if already assigned).</li>
+<li><code>Labels</code> (always include the sprint, or <code>uni-specific</code> if it is not tied to a sprint.)</li>
+<li><code>Parent</code></li>
+<li><code>Due Date</code>.</li>
+<li><em>Note that all of these can be left blank if adding the task to <code>Backlog</code>.</em></li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><em>Tasks can be added by anyone at any time.</em></p>
+</blockquote>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="add-sub-sprint">Add Sub-Sprint<a href="https://educationnetworkgroup.github.io/si-docs/blog/jira-project-board-management#add-sub-sprint" class="hash-link" aria-label="Direct link to Add Sub-Sprint" title="Direct link to Add Sub-Sprint">​</a></h3>
+<p>Sub-Sprints represent groupings of work that fall under a high-level sprint (<em>Dark Grey Epic</em>).</p>
+<p>To add a sub-sprint to the project board, follow these steps.</p>
+<ol>
+<li><strong>Click <code>Create Sprint</code>.</strong></li>
+<li><strong>Click the <code>Pencil Icon</code> on the newly created sprint.</strong></li>
+<li><strong>Fill in all fields and click <code>Update</code>.</strong></li>
+</ol>
+<blockquote>
+<p><em>Sprints should be added by the <code>site admin</code> after consultation with the team.</em></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="board">Board<a href="https://educationnetworkgroup.github.io/si-docs/blog/jira-project-board-management#board" class="hash-link" aria-label="Direct link to Board" title="Direct link to Board">​</a></h2>
+<p>All tasks in <strong>active sprints</strong> will be shown here. You can filter tasks via the features in the top bar above the board.</p>
+<p><img decoding="async" loading="lazy" alt="Jira Board" src="https://educationnetworkgroup.github.io/si-docs/assets/images/2025-25-04-jira-board-a474e8c812073539afe66bc933c0b059.png" width="1411" height="630" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="tracking-progress">Tracking Progress<a href="https://educationnetworkgroup.github.io/si-docs/blog/jira-project-board-management#tracking-progress" class="hash-link" aria-label="Direct link to Tracking Progress" title="Direct link to Tracking Progress">​</a></h3>
+<p>Each team member is expected to update the board by dragging tasks to the appropriate column as they go. Staying on top of task tracking is important for recording progress and ensuring that everyone is on the same page.</p>
+<p>Team members are encouraged to remind each other to update the board where they notice that tasks are out-of-date.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="releases">Releases<a href="https://educationnetworkgroup.github.io/si-docs/blog/jira-project-board-management#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases">​</a></h2>
+<p>Jira doesn't have a proper way to add milestone markers to the timeline, so we use <code>releases</code> as a workaround.</p>
+<p>To add a milestone marker, follow these steps.</p>
+<ol>
+<li>Click <code>Create version</code>.</li>
+<li>Add the following fields:<!-- -->
+<ul>
+<li><code>Name</code></li>
+<li><code>Start Date</code> &amp; <code>Release Date</code> (these should be the same date).</li>
+<li><code>Description</code> (optional).</li>
+</ul>
+</li>
+<li>Navigate to the <code>Timeline</code> view.</li>
+<li>Select the release, and click the <code>Highlight on timeline</code> checkbox.</li>
+</ol>
+<blockquote>
+<p><em>Releases should be added by the <code>site admin</code> after consultation with the team.</em></p>
+</blockquote>]]></content>
+        <author>
+            <name>Matthew Leigh</name>
+            <uri>https://github.com/MatthewLeigh</uri>
+        </author>
+    </entry>
+</feed>

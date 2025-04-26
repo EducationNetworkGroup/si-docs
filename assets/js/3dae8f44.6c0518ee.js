@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkscience_island_docs=self.webpackChunkscience_island_docs||[]).push([[8482],{3374:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/si-docs/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"One-off guides to help teams do specific tasks or coordinate outside of the codebase.","blogTitle":"One-off guides."}}')}}]);
