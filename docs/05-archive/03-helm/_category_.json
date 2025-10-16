@@ -1,6 +1,6 @@
 {
     "label": "Helm",
-    "position": 4,
+    "position": 3,
     "link": {
         "type": "generated-index",
         "description": "This section provides comprehensive documentation, tools, and resources related to Helm, a powerful package manager for Kubernetes. Explore detailed guides, best practices, and examples to help you effectively manage and deploy applications using Helm."
