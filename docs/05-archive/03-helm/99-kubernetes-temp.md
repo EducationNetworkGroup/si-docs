@@ -5,7 +5,7 @@ description: Temporary file with notes taken while learning Helm.
 
 # Kubernetes Temp
 
-> This document assumes an understanding of [Docker](../03-docker/01-the-basics.md). Please start there first if you are new to containerization.
+> This document assumes an understanding of [Docker](/docs/02-tools-and-technologies/03-docker/01-the-basics.md). Please start there first if you are new to containerization.
 
 ---
 
