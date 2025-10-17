@@ -22,7 +22,7 @@ The `si-auth-service` repository uses Keycloak for identity management and Postg
 
 ### Prerequisites
 
-- [Docker](/docs//02-tools-and-technologies//03-docker/01-the-basics.md)
+- [Docker](/docs/02-tools-and-technologies/03-docker/01-the-basics.md)
 
 ### Build & Run
 
