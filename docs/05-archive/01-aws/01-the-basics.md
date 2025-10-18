@@ -7,7 +7,7 @@ description: How to set up the AWS CLI.
 
 ## Prereq
 ---
-- See [Setting up Pulumi](../../03-guides/01-setup-local-environment/05-pulumi.md) to setup Pulumi, and get the details of the cloud environment.
+- See [Setting up Pulumi](../../03-guides/01-repositories/05-pulumi.md) to setup Pulumi, and get the details of the cloud environment.
 - Ensure you have created an account via AWS IAM within the Pulumi Project
 
 ## Install AWS CLI
