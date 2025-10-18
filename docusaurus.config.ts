@@ -104,7 +104,7 @@ const config: Config = {
                             to: '/',
                         },
                         {
-                            label: 'blog',
+                            label: 'Blog',
                             to: '/blog',
                         }
                     ],
