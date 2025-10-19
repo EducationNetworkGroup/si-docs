@@ -1,6 +1,6 @@
 {
     "label": "Documentation Management",
-    "position": 2,
+    "position": 5,
     "link": {
         "type": "generated-index",
         "description": "This section provides a detailed guide for contributing to, and maintaining, the documentation for Science Island."

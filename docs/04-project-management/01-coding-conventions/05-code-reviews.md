@@ -12,25 +12,25 @@ description: Best practices for conducting effective code reviews.
 
 ## What to Look For
 ### Code Quality
-- [ ] Follows established coding patterns
-- [ ] No unnecessary complexity
-- [ ] Proper error handling
-- [ ] Code is modular and reusable
+-  Follows established coding patterns
+-  No unnecessary complexity
+-  Proper error handling
+-  Code is modular and reusable
 
 ### Security
-- [ ] Input validation implemented
-- [ ] No hardcoded secrets
-- [ ] Principle of least privilege followed
-- [ ] Secure data handling
+-  Input validation implemented
+-  No hardcoded secrets
+-  Principle of least privilege followed
+-  Secure data handling
 
 ### Testing
-- [ ] Tests cover new functionality
-- [ ] Edge cases considered
-- [ ] Test names are descriptive
+-  Tests cover new functionality
+-  Edge cases considered
+-  Test names are descriptive
 
 ## Review Checklist
-- [ ] Code follows project conventions
-- [ ] No obvious bugs or issues
-- [ ] Documentation updated if needed
-- [ ] Performance considered for large changes
-- [ ] All comments addressed from previous reviews
+-  Code follows project conventions
+-  No obvious bugs or issues
+-  Documentation updated if needed
+-  Performance considered for large changes
+-  All comments addressed from previous reviews
