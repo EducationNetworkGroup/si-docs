@@ -16,11 +16,11 @@ The `Mapping-System-2022S2` repository is forked in `EducationNetworkGroup` from
 | Directory         | Tech           | Purpose                                                       | 
 |-------------------|----------------|---------------------------------------------------------------|
 | .github/workflows | GitHub Actions | ci/cd Workflows.                                              |
-| helm (obsolete)   | Kubernetes.    | Helm charts for Kubernetes.                         |
-| scripts           | Shell scripts  | Scripts used by the [Publish.yaml](/.github/workflows/Publish.yaml) workflow |
+| helm (obsolete)   | Kubernetes.    | Helm charts for Kubernetes.                                   |
+| scripts           | Shell scripts  | Scripts used by the `Publish.yaml` workflow                   |
 | src/backend       | Go             | Backend services                                              |
 | src/database      | MySQL          | A copy of the database init file used across Science Island   |
-| src/frontend      | React          | React SPA that relies on [nginx](/src/frontend/nginx/nginx.conf) for server side rendering |
+| src/frontend      | React          | React SPA that relies on `nginx` for server side rendering    |
 | src/keycloak      | JSON           | Basic Keycloak Realm File configured for local development    | 
 
 > helm is obsolete now as the live deployment was drastically simplified in the migration from AWS to GCP in 2025. Kubernetes was removed from the project in favour of a simple VM with a [docker-compose](https://github.com/EducationNetworkGroup/si-infrastructure/blob/main/docker-compose.yml) setup.
