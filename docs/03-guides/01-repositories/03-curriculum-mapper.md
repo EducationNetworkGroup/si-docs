@@ -3,7 +3,7 @@ sidebar_position: 3
 description: Introduction to the Mapping-System repository.
 ---
 
-# Curriculum Mapper
+# Curriculum Mapper (Mapping-System-2022S2)
 
 The Curriculum Mapper (`Mapping-System-2022S2`) is designed to link each *activity* within the Science Island game to official curriculum outcomes of different states / countries (e.g., the [F-10 Curriculum](https://www.australiancurriculum.edu.au/f-10-curriculum/f-10-curriculum-overview/) in Australia). The Curriculum Mapper lets admins manually make these associations and save them in the database. The end goal is that teacher's can plan *assignments* in the Teacher's Portal with specific *activities* that will show that students have achieved the specific outcomes required as part of the curriculum.
 
