@@ -3,7 +3,7 @@ sidebar_position: 2
 description: Introductory information for the Platform repository.
 ---
 
-# Teacher's Portal Application
+# Teacher's Portal (Platform)
 
 The `Teacher's Portal` is the application which allows for Teachers and Parents to create `Assignments` with multiple `Activities`, give those assignments to a	`Group` of Students, and then monitor the progress made by the Students. The Teacher's Portal has dashboards to view progress, and the ability to generate Excel and PDF reports showing progress (though this functionality is currently broken).
 
