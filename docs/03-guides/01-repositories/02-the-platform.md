@@ -50,7 +50,7 @@ The frontend of the Teacher's Portal is made with React v17.0.2 (October 2022). 
 
 There are tests set up for the React project that don't appear to have been utilized since the initial development work in 2021, as no subsequent team has completed any significant refactors of the frontend. If your team is completing work on updating, fixing, or completing the Teacher's Portal, these will probably be important to investigate.
 
-The `AutHandler` defined in `App.tsx` is where the current link between Keycloak validation and the user's in the existing database is made. Because the database uses integers for the user ids and Keycloak uses uuids, the users are instead signed-in via their email address here, as this is consistent between both. The password validation is handled by Keycloak, and has therefore been disabled in the Teacher's Portal frontend.
+The `AuthHandler` defined in `App.tsx` is where the current link between Keycloak validation and the user's in the existing database is made. Because the database uses integers for the user ids and Keycloak uses uuids, the users are instead signed-in via their email address here, as this is consistent between both. The password validation is handled by Keycloak, and has therefore been disabled in the Teacher's Portal frontend.
 
 Beyond that, components, pages, and routing are all where you would expect them to be. The project is are a bit messy, but you should be able to figure out what things do with a bit of time.
 
