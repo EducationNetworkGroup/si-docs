@@ -52,7 +52,7 @@ There are tests set up for the React project that don't appear to have been util
 
 The `AuthHandler` defined in `App.tsx` is where the current link between Keycloak validation and the user's in the existing database is made. Because the database uses integers for the user ids and Keycloak uses uuids, the users are instead signed-in via their email address here, as this is consistent between both. The password validation is handled by Keycloak, and has therefore been disabled in the Teacher's Portal frontend.
 
-Beyond that, components, pages, and routing are all where you would expect them to be. The project is are a bit messy, but you should be able to figure out what things do with a bit of time.
+Beyond that, components, pages, and routing are all where you would expect them to be. The project is a bit messy, but you should be able to figure out what things do with a bit of time.
 
 ### Backend / `server`
 
@@ -82,7 +82,7 @@ It's probably worth at least one person on your team getting familiar with Go, s
 
 The `Platform` repo is home to the database schema used by all applications within Science Island. You should definitely look into moving the database files into their own repository, since they are used by the `Main Website / Game` and `Curriculum Mapper` as well.
 
-The ERD file made with [drawio](https://www.drawio.com/doc/faq/google-drive-diagrams), and can be opened and edited through their desktop application or web browser. This file should be kept up-to-date to make life easier on everyone trying to understand the database.
+The ERD file is made with [drawio](https://www.drawio.com/doc/faq/google-drive-diagrams), and can be opened and edited through their desktop application or web browser. This file should be kept up-to-date to make life easier on everyone trying to understand the database.
 
 The `password-has-generator` is a simple script that allows you to generate hashed passwords with the bcrypt algorithm. This can be used if you want to extend the dummy-data with new users, since the passwords will need to be hashed before they are stored.
 
