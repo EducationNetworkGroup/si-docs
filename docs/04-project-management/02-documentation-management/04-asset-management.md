@@ -5,6 +5,11 @@ description: Guidelines for managing images, diagrams, and other assets.
 
 # Asset Management
 
+## Game Asset Stogae
+All game assets are stored in a dedicate Google Cloud Storage bucket seperate from our code repository.
+
+- **Base URL:** `http://storage.googleapis.com/science-island-gamedata/`
+
 ## Image Guidelines
 - **Location:** Store in `/static/img/` directory with appropriate subfolders
 - **Naming Convention:** Use kebab-case: `database-schema-v2.png`
