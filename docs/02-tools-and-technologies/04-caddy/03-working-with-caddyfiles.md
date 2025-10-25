@@ -54,7 +54,7 @@ pulumi up
 
 This recreates the VM with the new config.
 
-## Adding a New Domain
+## Adding a New Subdomain
 
 ### 1. Update Caddyfile
 
@@ -67,6 +67,8 @@ monitoring.scienceisland.com {
 ### 2. Update DNS
 
 Add A record: `monitoring.scienceisland.com` → `<instance-ip>`
+
+> **Note**: To add the A record, contact Bill (CTO) who can work with the domain provider to configure the DNS settings. If this is your first time setting up a subdomain, don't hesitate to ask for guidance on the DNS configuration process.
 
 ### 3. Deploy
 
