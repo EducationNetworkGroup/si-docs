@@ -3,6 +3,6 @@
     "position": 4,
     "link": {
         "type": "generated-index",
-        "description": "TODO"
+        "description": "Caddy is the reverse proxy and automatic HTTPS server that serves as the entry point for all Science Island services, routing traffic to Platform, Mapper, Keycloak, and the Website."
     }
 }
