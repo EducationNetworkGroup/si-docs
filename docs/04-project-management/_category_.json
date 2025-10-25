@@ -3,6 +3,6 @@
     "position": 3,
     "link": {
         "type": "generated-index",
-        "description": "TODO"
+        "description": "This section defines the team's workflows, coding standards, and collaborative on processes. It covers everthing from branch naming and commit conventions to code reviews, testing practices, and documentation maintenance."
     }
 }

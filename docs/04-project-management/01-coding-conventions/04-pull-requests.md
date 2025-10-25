@@ -17,7 +17,7 @@ If you're new to code review on GitHub, follow these steps:
 7. **Merge:** Once approved, you (or a teamate) can merge the PR into `main`. Delete the feature branch after a successful merge (unless you intend to continue working on it).
 
 ## Pull Request Requirements
-All pull request ithin the project mush adhere to the following requirements:
+All pull request ithin the project must adhere to the following requirements:
 
 - At least one team member should review submitted code.
 - If applicable, a different team member should witness the code working live.
