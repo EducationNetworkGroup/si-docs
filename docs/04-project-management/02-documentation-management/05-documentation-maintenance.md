@@ -13,7 +13,7 @@ description: Processes for keeping documentation current and relevant.
 - **Project Cycle:** Comprehensive review at project handover (every 9 months)
 
 ### Project-Specific Review Cycle
-Given the 9-month project duration, documentation should be reviewd:
+Given the 9-month project duration, documentation should be reviewed:
 - **At Project Kick-off:** Entire team reads through documentation and handover notes during first week
 - **At Project Handover:** Outgoing team updates docs and handover notes, incoming team reviews them
 - **Mid-Project Check:** Full team review around the 4-month mark
