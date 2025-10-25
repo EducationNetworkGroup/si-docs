@@ -30,6 +30,6 @@ All game assets are stored in a dedicate Google Cloud Storage bucket seperate fr
 
 ## Best Practices
 - **Regular Cleanup:** Removed unused assets quarterly
-- **Naming Convention:** See [Naming Convention](../04-project-management/01-coding-conventions/)for more details.
+- **Naming Convention:** See [Naming Convention](../01-coding-conventions/07-naming-conventions.md)for more details.
 - **Backup:** Important assets should be stored in version control
 - **Licensing:** ensure proper rights for all visual assets
