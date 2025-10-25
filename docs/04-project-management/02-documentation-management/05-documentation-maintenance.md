@@ -10,7 +10,14 @@ description: Processes for keeping documentation current and relevant.
 - **Monthly:** Review recently changed documents for accuracy
 - **Quarterly:** Full audit of high-traffic documentation
 - **After Releases:** Update docs for new features and API changes
-- **Annually:** Comprehensive review of all documentation
+- **Project Cycle:** Comprehensive review at project handover (every 9 months)
+
+### Project-Specific Review Cycle
+Given the 9-month project duration, documentatioj should be reviewd:
+- **At Project Kick-off:** Entire team reads through documentation and handover notes during first week
+- **At Project Handover:** Outgoing team updates docs and handover notes, incoming team reviews them
+- **Mid-Project Check:** Full team review around the 4-month mark
+- **When Processes Change:** Update relevant documents immediately when workflows change
 
 ### Audit Checklist
 -  Information is still accurate and relevant
