@@ -1,39 +1,60 @@
 ---
 sidebar_position: 3
-description: Understand and deploy the si-auth-service repository.
+description: Central authentication service for the Science Island platform.
 ---
 
-# KeyCloak (si-auth-service)
+# Keycloak (si-auth-service)
 
-The `si-auth-service` repository uses Keycloak for identity management and PostgreSQL as its backend database. Docker Compose is used to run all services locally. Caddy provides HTTPS via reverse proxy, and Keycloakify is used for theming the login UI.
+The `si-auth-service` repository provides the **central authentication and Single Sign-On (SSO)** service for the Science Island platform using **Keycloak**.  
+It includes the **version-controlled realm configuration**, **custom Science Island login theme**, and configuration for both **local development** and **production deployment**.
+
+This service is shared by multiple platform applications, so changes to **clients, redirect URLs, roles, and groups** must follow the documented workflow to avoid breaking authentication.
+
+---
 
 ## Folder Structure
 
-| File/Folder           | Description                                                   |
-|-----------------------|---------------------------------------------------------------|
-| `theme/`              | Source code for the custom Keycloak UI theme                  |
-| `caddy/`              | Configuration for reverse proxy and HTTPS                     |
-| `realms/`             | JSON file defining the default Keycloak realm setup           |
-| `Dockerfile`          | Builds the customized Keycloak container                      |
-| `docker-compose.yml`  | Sets up the full service stack locally                        |
-| `helm/`               | Kubernetes deployment using Helm charts                       |
+| Path | Description |
+|------|-------------|
+| `themes/science-island/` | Custom Science Island login + account UI theme |
+| `realms/science-island.json` | **Authoritative** Keycloak realm configuration (imported on startup) |
+| `helm/` | Helm chart for deployment to Kubernetes (GKE) |
+| `docker-compose.yml` | Local Keycloak + PostgreSQL development environment |
+| `.github/workflows/` | CI/CD pipelines for automated builds + Helm releases |
+| `Dockerfile` | Builds Keycloak image with the custom theme + realm configuration |
 
-## Local Deployment Guide
+---
 
-### Prerequisites
+## Live Deployment (Production)
 
-- [Docker](/docs/02-tools-and-technologies/03-docker/01-the-basics.md)
+Keycloak runs on a single Compute Engine VM in GCP using Docker Compose.
 
-### Build & Run
+**Production Login URL:**  
+https://login.scienceisland.com
 
-To build and run the service locally, run the following command.
+### Deployment Workflow
+
+This repository uses CI/CD to **automatically build and publish** the Keycloak Docker image when changes are pushed to the `main` branch or when a version tag is created.
+
+To deploy updates to production:
 
 ```bash
-docker compose up -d --build
+ssh <vm-user>@<vm-ip>
+cd /opt/si-auth-service
+git pull
+docker compose pull        
+docker compose up -d      
 ```
 
-You can then access the deployment at http://localhost.
+### Updating Realm Configuration
 
-Note that *you may need to wait a couple of minutes* after running the command before the images are set up and you can access the service.
+1. Make changes in Keycloak Admin Console
+2. Export realm **without users**
+3. Replace `realms/science-island.json` in this repository
+4. Commit and push the update
+5. Create a tag to trigger CI/CD image build:
 
-You can watch the logs for the `keycloak` container until you see the log for `Installed features:...`. Once you see that, everything should be ready and working.
+```bash
+git tag v0.0.x
+git push --tags
+```
