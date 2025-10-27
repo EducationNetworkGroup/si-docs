@@ -5,7 +5,7 @@ description: Local deployment for the ScienceIslandWebsite repository.
 
 # Science Island Website (ScienceIslandWebsite)
 
-The `Science Island Website` (also known as the `Main Website` or `Sales Website`) is the customer-facing application that advertises the Science Island product to potential users. This website also hosts the `Science Island Game`, which can be accessed with valid login credentials. 
+The `Science Island Website` (also known as the `Main Website` or `Sales Website`) is the customer-facing application that advertises the Science Island product to potential users. This website also hosts the `Science Island Game`, which can be accessed with valid login credentials.
 
 ## Deployments
 
@@ -46,7 +46,7 @@ See the `README.md` within the repository for sample credentials you can use to 
 
 The unity project for the `Science Island Game` can be found inside this folder under `unity/`. The game is considered complete, so changes to these files is unlikely. However exploration of the C# code may be required when attempting to understand interactions between the game, the UI and the database.
 
-> Note: The UI for the game is made using AngularJS in the `Website` folder and is not built into the Unity Project itself. 
+> Note: The UI for the game is made using AngularJS in the `Website` folder and is not built into the Unity Project itself.
 
 ### The Website / `Website`
 
@@ -71,7 +71,7 @@ This folder contains everything else important to the `Main Website / Game`. The
 | `webpages/`                  | The webpages for the `Main Website`.                                                            |
 | Loose Files                   | The loose files found in `/Website/site/` are a mix of parent pages (`app.js`, `index.html`, `main.php`), login infrastructure files (`keycloak-config.php`, `check-db.php`) and database helper files (all `return-x.php` files, `user-assignments.php`, `assignment.php`)                                       |
 
-## Gane Concepts 
+## Game Concepts
 
 | Concept                      | Description                                                                                     |
 | ---------------------------- | ----------------------------------------------------------------------------------------------- |
