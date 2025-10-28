@@ -11,6 +11,8 @@ Copies of `allInOne.sql` can be found in the `Main Website / Game (ScienceIsland
 
 Maintaining schema consistency across all instances of `allInOne.sql` is critical. Developers who make a change to the database's structure should ensure that change is applied across all repositories. 
 
+> Users should also be aware that KeyCloak has its own database that manages its own concerns. Presently, KeyCloak and Science Island a user's `email` to link the user (logging with KeyCloak) to their data saved in `allInOne`.
+
 ## Entity-Relationship Diagram
 
 The following ERD can be found in the `Teacher's Portal` repository, and can be editted using [draw.io](https://app.diagrams.net/?src=about). Ensure changes made to the structure of the database are reflected in the ERD.
