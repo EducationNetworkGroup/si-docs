@@ -55,9 +55,9 @@ Science Island uses three client applications that integrate with Keycloak for a
 
 | Application              | Client ID                  | Name                     | Web origins                          | Valid redirect URIs                    |
 | ------------------------ | -------------------------- | ------------------------ | ------------------------------------ | -------------------------------------- |
-| `Science Island Website` | scienceisland.com          | Science Island Client    | <https://scienceisland.com>          | <https://scienceisland.com/>*          |
-| `Teacher's Portal`       | platform.scienceisland.com | Teachers Portal Client   | <https://platform.scienceisland.com> | <https://platform.scienceisland.com/>* |
-| `Curriculum Mapper`      | mapper.scienceisland.com   | Curriculum Mapper Client | <https://mapper.scienceisland.com>   | <https://mapper.scienceisland.com/>*   |
+| `Science Island Website` | scienceisland.com          | Science Island Client    | `https://scienceisland.com`          | `https://scienceisland.com/*`          |
+| `Teacher's Portal`       | platform.scienceisland.com | Teachers Portal Client   | `https://platform.scienceisland.com` | `https://platform.scienceisland.com/*` |
+| `Curriculum Mapper`      | mapper.scienceisland.com   | Curriculum Mapper Client | `https://mapper.scienceisland.com`   | `https://mapper.scienceisland.com/*`   |
 
 ### Authentication Configuration
 
