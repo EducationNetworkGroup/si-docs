@@ -119,7 +119,7 @@ Changes require `pulumi up` which recreates the VM.
 ### Local
 ```bash
 cd si-auth-service
-docker compose up -d
+docker compose up -d --build
 ```
 
 ## Service Discovery
