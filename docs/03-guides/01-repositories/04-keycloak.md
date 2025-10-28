@@ -44,7 +44,22 @@ Production deployment is managed in the **si-infrastructure** repository via CI/
 
 No manual SSH access or container restarts are required.
 
-### Updating Realm Configuration
+---
+
+## Environment Variables & Secrets (`.env`)
+
+The live deployment uses a `.env` file stored **only on the VM**.  
+It contains Keycloak + database credentials and must **not** be committed to Git.
+
+**Location on VM:**
+
+/opt/app/.env
+
+These variables are loaded automatically by `docker-compose.yml`.
+
+---
+
+## Updating Realm Configuration
 
 Changes made in the Keycloak Admin Console are **not automatically persisted** to this repository.  
 If you do not export and commit the updated realm file, your changes will be **lost on redeployment**.
