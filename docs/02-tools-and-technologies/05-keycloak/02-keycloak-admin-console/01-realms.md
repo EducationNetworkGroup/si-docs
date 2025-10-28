@@ -47,6 +47,8 @@ Keycloak may need to send emails to verify users, change passwords, or notify an
 | `Reply to display name` | The display name for the reply-to email.                                                                 |
 | `Envelope from`         | The email address used for handling bounced emails (errors like "email not found").                      |
 
+> Note: The email *noreply@scienceisland.com* doesn't actually exist, and is purely being used for example purposes in the table above.
+
 #### Connection & Authentication
 
 | Field                 | Description                                                                                                                  |
