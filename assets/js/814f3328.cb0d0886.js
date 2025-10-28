@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkscience_island_docs=self.webpackChunkscience_island_docs||[]).push([[7472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Jira Project Board Management","permalink":"/si-docs/blog/jira-project-board-management","unlisted":false,"date":"2025-04-25T00:00:00.000Z"}]}')}}]);

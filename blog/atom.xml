@@ -2,11 +2,56 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://educationnetworkgroup.github.io/si-docs/blog</id>
     <title>Science Island Blog</title>
-    <updated>2025-04-25T00:00:00.000Z</updated>
+    <updated>2025-10-28T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://educationnetworkgroup.github.io/si-docs/blog"/>
     <subtitle>Science Island Blog</subtitle>
     <icon>https://educationnetworkgroup.github.io/si-docs/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Database Development Timeline]]></title>
+        <id>https://educationnetworkgroup.github.io/si-docs/blog/database-history</id>
+        <link href="https://educationnetworkgroup.github.io/si-docs/blog/database-history"/>
+        <updated>2025-10-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[A brief summary of the development timeline for the database.]]></summary>
+        <content type="html"><![CDATA[<p>After a decent amount of investigation on my part, I've managed to document a high-level summary of the development done on the database(s) within this project between 2021-2025</p>
+<p>In case a future team feels the need to dive into the project history to better understand how the database was created and combined over the years, I've left my notes below.</p>
+<ul>
+<li>
+<p><strong>Early 2021</strong>: Development on the <a href="https://github.com/EducationNetworkGroup/Platform" target="_blank" rel="noopener noreferrer">Teacher's Portal</a> begins. <code>schema.sql</code> is created for the database. It primarily features data related to identification and administration (Users, Staff, Students, Schools, etc.)</p>
+</li>
+<li>
+<p><strong>Mid 2021</strong>: Additional tables are added to the database via independent <code>.sql</code> files that are kept separate from <code>schema.sql</code>. These tables are related to content (<code>realms.sql</code>, <code>activity.sql</code>, etc.)</p>
+</li>
+<li>
+<p><strong>Late 2021</strong>: Citing issues with the AWS deployment of the database, all aforementioned <code>.sql</code> files are combined into <code>allInOne.sql</code></p>
+</li>
+<li>
+<p><strong>Early-Mid 2022</strong>: <a href="https://github.com/EducationNetworkGroup/ScienceIslandWebsite" target="_blank" rel="noopener noreferrer">ScienceIslandWebsite</a> is created. The previously completed Science Island Game is committed to this repo. Alongside this game is <code>science_island.sql</code>, which features a database closely related to game users (user_progress, purchased_item, shop, etc.)</p>
+</li>
+<li>
+<p><strong>Mid 2022</strong>: <code>allInOne.sql</code> receives two major updates that add a significant amount of tables. It appears most of these tables relate to the <a href="https://github.com/EducationNetworkGroup/Mapping-System-2022S2" target="_blank" rel="noopener noreferrer">Curriculum Mapper</a>.</p>
+</li>
+<li>
+<p><strong>Mid 2023</strong>: It appears after some significant development in a local environment, <code>science_island_backup.sql</code> is committed to <a href="https://github.com/EducationNetworkGroup/ScienceIslandWebsite" target="_blank" rel="noopener noreferrer">ScienceIslandWebsite</a> and used as its primary database. It is heavily based on the aforementioned <code>science_island.sql</code>, sharing its naming conventions and tables.</p>
+</li>
+<li>
+<p><strong>Late 2023</strong>: In a single commit, <code>science_island_backup.sql</code> and ~4 variations of it appear in the <a href="https://github.com/EducationNetworkGroup/Platform" target="_blank" rel="noopener noreferrer">Teacher's Portal</a> repo. Later that month, 3 more variations are committed, titled v4, v5 and v6. At the end of the 2023 cycle, it appears <code>v6.sql</code> was being used by both the <a href="https://github.com/EducationNetworkGroup/Platform" target="_blank" rel="noopener noreferrer">Teacher's Portal</a> and <a href="https://github.com/EducationNetworkGroup/ScienceIslandWebsite" target="_blank" rel="noopener noreferrer">ScienceIslandWebsite</a> for the live deployment.</p>
+</li>
+<li>
+<p><strong>2024</strong>: The team working this year spent a decent amount of time on containerization, local deployment overhauling, and AWS optimization. During this restructuring, <code>allInOne.sql</code> (which was still present in the <a href="https://github.com/EducationNetworkGroup/Platform" target="_blank" rel="noopener noreferrer">Teacher's Portal</a>) was re-implemented as the primary database. Due to being focused on other parts of the project, this error was missed which meant minimal query updates took place.</p>
+</li>
+<li>
+<p><strong>2025</strong>:  This team (us) (hi future teams) begun work on the project under the assumption <code>allInOne.sql</code> was the most up-to-date database in the project. As of late August 2025 we have caught the mistake and are working to revert any changes and move forward with the v6 schema (likely named something more appropriate by the time you read this comment).</p>
+</li>
+<li>
+<p><strong>2025 Part 2</strong>: Hi again. Just one last note from me as I officially add this post to the blog: we ended up keeping the <code>allInOne</code> name while still reverting back to the original v6 schema. Between August 2025 and October 2025 we've made some minor alterations to the database, mostly with switching Composite Primary Keys to just Primary Keys (something that appeared to be half-complete by the 2023 team). We've also removed dummy data relating to users amd user progress, and replaced it with our own.</p>
+</li>
+</ul>]]></content>
+        <author>
+            <name>Henry Richardson</name>
+            <uri>https://github.com/Todddotexe</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Jira Project Board Management]]></title>
         <id>https://educationnetworkgroup.github.io/si-docs/blog/jira-project-board-management</id>
