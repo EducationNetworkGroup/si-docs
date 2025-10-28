@@ -63,12 +63,12 @@ Science Island uses three client applications that integrate with Keycloak for a
 
 All Science Island clients share the following authentication settings:
 
-| Setting                 | Value          | Description                                                     |
-| ----------------------- | -------------- | --------------------------------------------------------------- |
-| `Client type`           | OpenID Connect | Authentication protocol used by all clients.                    |
-| `Client authentication` | Public         | Clients do not require a secret for authentication.             |
-| `Standard flow`         | Enabled        | Browser-based authentication flow (authorization code flow).    |
-| `Direct access grants`  | Enabled        | Allows username / password authentication via direct API calls. |
+| Setting                 | Value          | Description                                                   |
+| ----------------------- | -------------- | ------------------------------------------------------------- |
+| `Client type`           | OpenID Connect | Authentication protocol used by all clients.                  |
+| `Client authentication` | Public         | Clients do not require a secret for authentication.           |
+| `Standard flow`         | Enabled        | Browser-based authentication flow (authorization code flow).  |
+| `Direct access grants`  | Enabled        | Allows username/password authentication via direct API calls. |
 
 ---
 

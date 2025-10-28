@@ -17,7 +17,7 @@ From the *User* page, you should be able to find the *Add User* button. This wil
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Username`              | Defines the username associated with the user. Used for internal referencing.                                                                                 |
 | `Email`                 | Associates an email with the user.                                                                                                                            |
-| `First / Last Name`     | Identifying information about the user. Handy for Teachers to identify students.                                                                              |
+| `First/Last Name`       | Identifying information about the user. Handy for Teachers to identify students.                                                                              |
 | `Required user actions` | A series of actions required by the user when they first login. Includes examples such as *Update Password* or *Verify Email*.                                |
 | `Email verified`        | A toggle that dictates if a user's email is automatically considered verified. Keycloak can be configured to restrict access to users with unverified emails. |
 | `Groups`                | Defines the groups the user is in.                                                                                                                            |

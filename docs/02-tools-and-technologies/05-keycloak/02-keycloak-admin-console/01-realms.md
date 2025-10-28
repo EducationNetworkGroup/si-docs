@@ -25,7 +25,7 @@ Accessible via the *Realm Settings* option in the sidebar.
 
 ### SSL Configuration
 
-In the *General* tab. Each realm has an associated SSL Mode which dictates the SSL / HTTP requirements browsers and applications have to meet to interact with the realm. There are 3 options for SSL Mode, selectable in the *Require SSL* dropdown box.
+In the *General* tab. Each realm has an associated SSL Mode which dictates the SSL/HTTP requirements browsers and applications have to meet to interact with the realm. There are 3 options for SSL Mode, selectable in the *Require SSL* dropdown box.
 
 | Option              | Description                                                                   |
 | ------------------- | ----------------------------------------------------------------------------- |
