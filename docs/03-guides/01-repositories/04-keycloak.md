@@ -9,7 +9,7 @@ The `si-auth-service` repository provides the **central authentication and Singl
 It includes the **version-controlled realm configuration**, **custom Science Island login theme**, and configuration for both **local development** and **production deployment**.
 
 This service is shared by multiple platform applications, so changes to **clients, redirect URLs, roles, and groups** must follow the documented workflow to avoid breaking authentication.
-
+ 
 ---
 
 ## Folder Structure
@@ -18,43 +18,58 @@ This service is shared by multiple platform applications, so changes to **client
 |------|-------------|
 | `themes/science-island/` | Custom Science Island login + account UI theme |
 | `realms/science-island.json` | **Authoritative** Keycloak realm configuration (imported on startup) |
-| `helm/` | Helm chart for deployment to Kubernetes (GKE) |
+| `caddy/` | Reverse proxy + HTTPS configuration for public access |
+| `scripts/` | Utility scripts (token generation, debugging) |
 | `docker-compose.yml` | Local Keycloak + PostgreSQL development environment |
 | `.github/workflows/` | CI/CD pipelines for automated builds + Helm releases |
 | `Dockerfile` | Builds Keycloak image with the custom theme + realm configuration |
 
+> Helm is obsolete now as the live deployment was drastically simplified in the migration from AWS to GCP in 2025. Kubernetes was removed from the project in favour of a simple VM setup.
+
 ---
 
-## Live Deployment (Production)
-
-Keycloak runs on a single Compute Engine VM in GCP using Docker Compose.
+## Live Deployment
 
 **Production Login URL:**  
 https://login.scienceisland.com
 
 ### Deployment Workflow
 
-This repository uses CI/CD to **automatically build and publish** the Keycloak Docker image when changes are pushed to the `main` branch or when a version tag is created.
+This repository does **not** handle production deployment directly.
 
-To deploy updates to production:
+Production deployment is managed in the **si-infrastructure** repository via CI/CD pipelines, which:
+- Build and publish the Keycloak container image
+- Apply Helm chart updates to the cluster
+- Manage rollout and versioning
 
-```bash
-ssh <vm-user>@<vm-ip>
-cd /opt/si-auth-service
-git pull
-docker compose pull        
-docker compose up -d      
-```
+No manual SSH access or container restarts are required.
 
 ### Updating Realm Configuration
 
-1. Make changes in Keycloak Admin Console
-2. Export realm **without users**
-3. Replace `realms/science-island.json` in this repository
-4. Commit and push the update
-5. Create a tag to trigger CI/CD image build:
+Changes made in the Keycloak Admin Console are **not automatically persisted** to this repository.  
+If you do not export and commit the updated realm file, your changes will be **lost on redeployment**.
+
+To persist changes:
+
+To persist configuration changes:
+
+1. Log into the **Keycloak Admin Console**
+2. Navigate to: **Realm Settings → Export**
+3. Set the export options:
+   - **Export users** → `OFF`  
+   - **Export groups and roles** → `ON`
+4. Click **Export** → a `.json` file will download
+5. Replace the file in this repository: realms/science-island.json
+6. Commit and push the updated file:
 
 ```bash
-git tag v0.0.x
-git push --tags
+git add realms/science-island.json
+git commit -m "chore: update Keycloak realm configuration"
+git push
 ```
+
+Important:
+The realm file in this repository is exported without users on purpose.
+There are demo/test accounts currently used for presentations (e.g., the account provided to the client) which exist only in the live Keycloak instance.
+These accounts should not be stored in version control.
+If demo accounts need to be recreated, they should be added manually through the Admin Console.
