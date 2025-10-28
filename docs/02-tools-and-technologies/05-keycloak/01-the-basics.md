@@ -13,7 +13,7 @@ Keycloak is an open-source identity and access management solution designed to p
 
 Before continuing, its highly advised you install [Docker](../03-docker/01-the-basics.md) and set up a [Local Keycloak Server](https://www.Keycloak.org/getting-started/getting-started-docker) as a visual reference.
 
-### How does work Keycloak with your applications?
+### How does Keycloak work with your applications?
 
 Keycloak is a separate server that you manage on your network. In the case of Science Island, Keycloak is handled in the *si-auth-service* repository. Applications are configured to point to and be secured by this server. When attempting to log into an application, the browser will redirect the user to the Keycloak authentication server where they enter their credentials in exchange for a token. This token is then read by the application to determine if the user should be allowed access.
 
