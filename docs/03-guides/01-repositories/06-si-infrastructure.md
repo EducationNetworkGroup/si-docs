@@ -17,7 +17,7 @@ Science Island is currently migrating from AWS to GCP. Some AWS resources may st
 
 **For most development work, you only need to focus on the GCP infrastructure documented here.**
 
-For details on the migration and any remaining AWS resources, see: [Cloud Environment → AWS to GCP Migration](/docs/guides/cloud-environment/migration-aws-gcp/overview)
+For details on the migration and any remaining AWS resources, see: [Cloud Environment → AWS to GCP Migration](/guides/cloud-environment/migration-aws-gcp/overview)
 
 :::
 
