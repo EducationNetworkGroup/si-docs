@@ -1,8 +1,8 @@
 {
-    "label": "KeyCloak",
+    "label": "Keycloak",
     "position": 5,
     "link": {
         "type": "generated-index",
-        "description": "KeyCloak is an open-source Identity and Access Management solution for modern applications and services, providing features like single sign-on, user federation, and social login."
+        "description": "Keycloak is an open-source Identity and Access Management solution for modern applications and services, providing features like single sign-on, user federation, and social login."
     }
 }
