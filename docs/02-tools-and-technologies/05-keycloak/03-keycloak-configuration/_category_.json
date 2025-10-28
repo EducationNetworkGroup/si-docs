@@ -1,8 +1,0 @@
-{
-    "label": "Keycloak Configuration",
-    "position": 3,
-    "link": {
-        "type": "generated-index",
-        "description": "Understanding how Keycloak has been configured for Science Island."
-    }
-}
