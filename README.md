@@ -10,4 +10,4 @@ You can view the docs at [https://educationnetworkgroup.github.io/si-docs/](http
 
 ## Local Deployment
 
-Follow [guides/documentation-management/the-basics](https://educationnetworkgroup.github.io/si-docs/guides/documentation-management/the-basics) to run the project locally.
+Follow [guides/documentation-management/the-basics](https://educationnetworkgroup.github.io/si-docs/project-management/documentation-management/the-basics) to run the project locally.
