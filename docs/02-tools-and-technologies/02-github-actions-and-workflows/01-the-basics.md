@@ -21,21 +21,21 @@ Science Island uses GitHub Actions to automate the entire deployment process, fr
 
 ## Terminology
 
-| Term                  | Definition                                                                                                                                                                                  |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Workflow`            | An automated process defined in a YAML file that runs one or more jobs in response to events.                                                                                               |
-| `Job`                 | A set of steps that execute on the same runner. Jobs can run in parallel or sequentially depending on dependencies.                                                                         |
-| `Step`                | An individual task within a job, such as running a command or using an action.                                                                                                              |
-| `Action`              | A reusable unit of code that performs a specific task. Actions can be created by GitHub, the community, or custom-built.                                                                    |
-| `Runner`              | A server that runs workflows. GitHub provides hosted runners, or you can host your own.                                                                                                     |
-| `Event`               | A specific activity that triggers a workflow, such as a push, pull request, or custom repository dispatch event.                                                                            |
-| `Container Image`     | A lightweight, standalone package that contains everything needed to run a piece of software, including code, runtime, and dependencies.                                                    |
-| `Container Registry`  | A storage and distribution system for container images. GHCR is GitHub's container registry service.                                                                                        |
-| `Image Tag`           | A label applied to a container image to identify different versions or variants of the image.                                                                                               |
-| `Repository Dispatch` | A custom event that can be triggered via the GitHub API to start a workflow in a different repository.                                                                                      |
-| `Pulumi`              | Infrastructure as code tool that allows defining cloud resources using programming languages.                                                                                               |
-| `Virtual Machine`     | A compute instance in Google Cloud Platform that runs Science Island services.                                                                                                              |
-| `Docker Compose`      | A tool for defining and running multi-container Docker applications using a YAML file. See [Docker Compose](/docs/02-tools-and-technologies/03-docker/07-docker-compose/) for more details. |
+| Term                  | Definition                                                                                                                                                                                                  |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Workflow`            | An automated process defined in a YAML file that runs one or more jobs in response to events.                                                                                                               |
+| `Job`                 | A set of steps that execute on the same runner. Jobs can run in parallel or sequentially depending on dependencies.                                                                                         |
+| `Step`                | An individual task within a job, such as running a command or using an action.                                                                                                                              |
+| `Action`              | A reusable unit of code that performs a specific task. Actions can be created by GitHub, the community, or custom-built.                                                                                    |
+| `Runner`              | A server that runs workflows. GitHub provides hosted runners, or you can host your own.                                                                                                                     |
+| `Event`               | A specific activity that triggers a workflow, such as a push, pull request, or custom repository dispatch event.                                                                                            |
+| `Container Image`     | A lightweight, standalone package that contains everything needed to run a piece of software, including code, runtime, and dependencies.                                                                    |
+| `Container Registry`  | A storage and distribution system for container images. GHCR is GitHub's container registry service.                                                                                                        |
+| `Image Tag`           | A label applied to a container image to identify different versions or variants of the image.                                                                                                               |
+| `Repository Dispatch` | A custom event that can be triggered via the GitHub API to start a workflow in a different repository.                                                                                                      |
+| `Pulumi`              | Infrastructure as code tool that allows defining cloud resources using programming languages.                                                                                                               |
+| `Virtual Machine`     | A compute instance in Google Cloud Platform that runs Science Island services.                                                                                                                              |
+| `Docker Compose`      | A tool for defining and running multi-container Docker applications using a YAML file. See [Docker Compose](/docs/02-tools-and-technologies/03-docker/07-docker-compose/01-the-basics.md) for more details. |
 
 ---
 
