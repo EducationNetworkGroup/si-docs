@@ -1,8 +1,8 @@
 {
-    "label": "GitHub Actions & Workflows",
-    "position": 2,
-    "link": {
-        "type": "generated-index",
-        "description": "TODO"
-    }
+	"label": "GitHub Actions & Workflows",
+	"position": 2,
+	"link": {
+		"type": "generated-index",
+		"description": "GitHub Actions is a CI/CD platform that automates Science Island's deployment pipeline, building and publishing Docker images to GHCR and deploying services to Google Cloud Platform using Pulumi."
+	}
 }
