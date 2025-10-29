@@ -7,6 +7,8 @@ description: Introduction to GitHub Actions and GHCR.
 
 This guide provides an introduction to GitHub Actions and GitHub Container Registry (GHCR), their fundamental concepts, and the role they play in Science Island's deployment pipeline.
 
+---
+
 ## What is GitHub Actions?
 
 GitHub Actions is a continuous integration and continuous deployment (CI/CD) platform integrated directly into GitHub. It allows you to automate workflows triggered by events in your repository, such as pushing code, creating pull requests, or publishing releases. Workflows are defined using YAML files stored in the `.github/workflows` directory of your repository.
