@@ -67,8 +67,8 @@ All services communicate via an **internal Docker network**. Only **Caddy** is e
 |--------|---------|------|
 | `keycloak-admin-password` | **GCP Secret Manager** | Used for Keycloak admin console |
 | `keycloak-db-password` | **GCP Secret Manager** | Used by Keycloak → Postgres |
-| Google OAuth Client ID/Secret | **Pulumi config (secret) + Caddy** | Powers the Google SSO identity provider added in Sprint 3. Local dev uses separate, short-lived "burned" credentials rather than the production pair. |
-| Brevo SMTP credentials | **Keycloak realm SMTP config** | Sends forgotten-password emails; replaced Gmail in Sprint 3 after Swinburne's mail filter began blocking delivery. |
+| Google OAuth Client ID/Secret | **Pulumi config (secret) + Caddy** | Powers the Google SSO identity provider. Local dev uses separate, short-lived "burned" credentials rather than the production pair. |
+| Brevo SMTP credentials | **Keycloak realm SMTP config** | Sends forgotten-password emails; replaced Gmail after Swinburne's mail filter began blocking delivery. |
 | Platform service `.env` values | Stored on VM | Should be migrated to Secret Manager later |
 
 ---
@@ -87,7 +87,7 @@ The platform uses **automated deployments**:
    docker compose up -d
    ```
 
-Because of the approval bottleneck, the team moved from pushing each change to production individually to batching a sprint's changes into a single deployment (adopted in Sprint 3) — this doesn't remove the approval step, but reduces how often the team is blocked waiting on it.
+Because of the approval bottleneck, the team moved from pushing each change to production individually to batching a set of changes into a single deployment — this doesn't remove the approval step, but reduces how often the team is blocked waiting on it.
 
 ### Rollback
 
@@ -107,7 +107,7 @@ This ensures versioned, repeatable rollbacks with no manual SSH intervention.
 |-----------|--------|
 | **Single VM deployment** | No horizontal scaling or redundancy — if the VM goes down, the whole platform is unavailable. |
 | **Deployment approval bottleneck** | Shipping to `si-infrastructure` requires a manually-bumped Pulumi version tag and manual PR approval from the project supervisor, adding friction and delay to every release (see above). |
-| **Google SSO in testing mode** | App-driven self-service sign-up has existed since Sprint 1; Google SSO was added on top in Sprint 3 as an additional sign-in path, but Google OAuth is still in *testing* mode — only an allow-listed set of Google accounts can use it until the app passes Google's verification process. |
+| **Google SSO in testing mode** | App-driven self-service sign-up has existed for some time; Google SSO was added on top as an additional sign-in path, but Google OAuth is still in *testing* mode — only an allow-listed set of Google accounts can use it until the app passes Google's verification process. |
 | **Platform microservices tightly coupled** | Updates may require coordinated deployments; future refactor could improve modularity. |
 
 ---

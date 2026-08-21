@@ -114,12 +114,12 @@ pulumi destroy
 
 ---
 
-You're now set up to manage your infrastructure using Pulumi!
-
----
-
 ### Version Tags Matter
 
 Pulumi only picks up a new Docker image on `pulumi up` if the corresponding version tag in the stack config has also changed — pushing a commit to `main` without bumping the tag will be silently ignored, and the previous image keeps running. See [si-infrastructure: Deployment Approval Bottleneck](06-si-infrastructure.md#deployment-approval-bottleneck) for the current (manual, approval-gated) workflow this requires.
+
+---
+
+You're now set up to manage your infrastructure using Pulumi!
 
 ---

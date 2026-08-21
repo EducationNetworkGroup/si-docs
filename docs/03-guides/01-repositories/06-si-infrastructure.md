@@ -147,11 +147,13 @@ sudo docker compose logs <service-name>
 
 ## Deployment Approval Bottleneck
 
-Pulumi ignores a new commit to `main` unless its Docker image version tag has also changed. In practice this means every deployable change needs a **second, manual PR against this repository** that bumps the version tag, in addition to the PR against the source repo — and that second PR requires manual approval from the project supervisor before `pulumi up` will actually roll out the new image. Since Sprint 2 this has been the main source of deployment delay, as it depends on the supervisor's availability rather than CI/CD. See [Deployment](../02-cloud-environment/02-deployment.md) for the full workflow, and consider whether this approval requirement can be automated or delegated further.
+Pulumi ignores a new commit to `main` unless its Docker image version tag has also changed. In practice this means every deployable change needs a **second, manual PR against this repository** that bumps the version tag, in addition to the PR against the source repo — and that second PR requires manual approval from the project supervisor before `pulumi up` will actually roll out the new image. This has been the main source of deployment delay, as it depends on the supervisor's availability rather than CI/CD. See [Deployment](../02-cloud-environment/02-deployment.md) for the full workflow, and consider whether this approval requirement can be automated or delegated further.
+
+---
 
 ## Known Issues & Recent Fixes
 
-Sprint 2 traced a recurring bug — user accounts and event settings appearing to reset after a production deploy — to Pulumi occasionally deleting and recreating the Filestore volume backing Keycloak's PostgreSQL database (and, separately, replacing the VM itself) on `pulumi up`. Sprint 3 shipped fixes for this:
+A recurring bug — user accounts and event settings appearing to reset after a production deploy — was traced to Pulumi occasionally deleting and recreating the Filestore volume backing Keycloak's PostgreSQL database (and, separately, replacing the VM itself) on `pulumi up`. Fixes have since been shipped for this:
 
 - Filestore is no longer replaced on every `apply`.
 - The VM's GCP instance name and boot image are pinned so a routine update doesn't trigger an unintended VM replacement.
@@ -161,5 +163,5 @@ If you see users or config disappearing after a deploy, check these Compute/File
 
 ### In-Progress: Single Entry Point Refactor
 
-`si-infrastructure` is meant to be the single orchestration point for all of Science Island's Docker Compose images, but research in Sprint 3 found the repository doesn't fully function that way yet — local development and production don't consistently build from the same source, increasing the risk of "works locally, breaks in prod" bugs. A remediation plan (target: `si-infrastructure` as the sole entry point, with Caddy routing mirroring the GCP setup) was drafted in Sprint 3 and is planned to continue into Sprint 4.
+`si-infrastructure` is meant to be the single orchestration point for all of Science Island's Docker Compose images, but a review found the repository doesn't fully function that way yet — local development and production don't consistently build from the same source, increasing the risk of "works locally, breaks in prod" bugs. A remediation plan (target: `si-infrastructure` as the sole entry point, with Caddy routing mirroring the GCP setup) has been drafted and remains an ongoing piece of work.
 

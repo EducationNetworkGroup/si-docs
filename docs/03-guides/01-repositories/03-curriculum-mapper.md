@@ -27,15 +27,15 @@ The `Mapping-System-2022S2` repository is forked in `EducationNetworkGroup` from
 
 ## Access Control
 
-Since Sprint 2, access to the Curriculum Mapper is gated by the Keycloak `admin-teacher` realm role — a plain `teacher` or `student` role is rejected. This was a deliberate design choice: the client wanted only a small subset of teaching staff (roughly 10 at a time) able to edit curriculum mappings. Granting or revoking `admin-teacher` for a user in the Keycloak Admin Console immediately changes whether they can reach the Mapper. See [Keycloak Configuration](../../02-tools-and-technologies/05-keycloak/03-configuration.md#roles) for the full role/resource matrix.
+Access to the Curriculum Mapper is gated by the Keycloak `admin-teacher` realm role — a plain `teacher` or `student` role is rejected. This was a deliberate design choice: the client wanted only a small subset of teaching staff (roughly 10 at a time) able to edit curriculum mappings. Granting or revoking `admin-teacher` for a user in the Keycloak Admin Console immediately changes whether they can reach the Mapper. See [Keycloak Configuration](../../02-tools-and-technologies/05-keycloak/03-configuration.md#roles) for the full role/resource matrix.
 
-Local development was aligned with the Platform in Sprint 2 so both use the same database and Keycloak configuration, rather than separate local setups.
+Local development has been aligned with the Platform so both use the same database and Keycloak configuration, rather than separate local setups.
 
 ## Live Deployment
 
 You can access the live Curriculum Mapper frontend at [mapper.scienceisland.com](https://mapper.scienceisland.com).
 
-The backend service for the live deployment is accessible at `https://api.scienceisland.com/api/v1/mapper*` - defined in [`si-infrastructure`](https://github.com/EducationNetworkGroup/si-infrastructure/blob/main/src/gcp/compute/prod.Caddyfile). This route uses Caddy's `handle_path` directive so the `/api/v1/mapper` prefix is stripped before forwarding — a routing bug here was one of the CORS/connectivity issues fixed in Sprint 2.
+The backend service for the live deployment is accessible at `https://api.scienceisland.com/api/v1/mapper*` - defined in [`si-infrastructure`](https://github.com/EducationNetworkGroup/si-infrastructure/blob/main/src/gcp/compute/prod.Caddyfile). This route uses Caddy's `handle_path` directive so the `/api/v1/mapper` prefix is stripped before forwarding — a routing bug here was one of several past CORS/connectivity issues that have since been fixed.
 
 ## Local Deployment
 
