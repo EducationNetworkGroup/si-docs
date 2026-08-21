@@ -78,6 +78,18 @@ For the functions that each service provides, you'll need to look in the `/serve
 
 It's probably worth at least one person on your team getting familiar with Go, since there's a bit of an initial learning curve.
 
+### Authorization and RBAC
+
+Since Sprint 2, every request into the backend passes through an authorization middleware (informally called the "bouncer", `rbac.go`) that validates the caller's Keycloak realm role — see [Keycloak Configuration](../../02-tools-and-technologies/05-keycloak/03-configuration.md#roles) for the role list — before the request reaches the database. Role identifiers are defined as constants (`permissions.go`) rather than raw strings to prevent mistyped-permission bugs, and each role's permission map is deep-copied (`copyPermission`) so that editing one role's permissions can't accidentally leak into another's.
+
+Authentication itself is a **dual-session** setup: the backend issues its own (legacy) PASETO token alongside the Keycloak session. This has a known rough edge — logging out doesn't fully terminate both sides of the session, so a user who logs out and then clicks "Sign In" can be redirected back to the homepage instead of the login screen, rather than getting a clean re-login. Fully dismantling the legacy PASETO session in favour of relying on Keycloak alone is tracked as future work (targeted for Sprint 3+, not yet done as of the Sprint 3 report).
+
+The `account` service also exposes `DELETE /api/v1/administrator/:id`, which deletes a user from both Keycloak and the Platform database in one call (previously, deleting a user in Keycloak left an orphaned row in the database).
+
+### Teacher-Created Student Accounts
+
+The *People → Create Accounts* page in the Teacher's Portal lets a teacher create student accounts directly, either one at a time or in bulk via CSV import (download a template with `FirstName`, `LastName`, `Role`, `Email`, `Password` columns, fill it in, then import). Imported accounts are shown in a review list before creation. On submission, the backend creates each user in Keycloak, assigns them the `student` realm role automatically, and reflects them in the Platform database — no manual Keycloak admin console work is required.
+
 ### Database / `database`
 
 The `Platform` repo is home to the database schema used by all applications within Science Island. You should definitely look into moving the database files into their own repository, since they are used by the `Main Website / Game` and `Curriculum Mapper` as well.

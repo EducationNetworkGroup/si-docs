@@ -67,6 +67,8 @@ All services communicate via an **internal Docker network**. Only **Caddy** is e
 |--------|---------|------|
 | `keycloak-admin-password` | **GCP Secret Manager** | Used for Keycloak admin console |
 | `keycloak-db-password` | **GCP Secret Manager** | Used by Keycloak → Postgres |
+| Google OAuth Client ID/Secret | **Pulumi config (secret) + Caddy** | Powers the Google SSO identity provider added in Sprint 3. Local dev uses separate, short-lived "burned" credentials rather than the production pair. |
+| Brevo SMTP credentials | **Keycloak realm SMTP config** | Sends forgotten-password emails; replaced Gmail in Sprint 3 after Swinburne's mail filter began blocking delivery. |
 | Platform service `.env` values | Stored on VM | Should be migrated to Secret Manager later |
 
 ---
@@ -75,14 +77,17 @@ All services communicate via an **internal Docker network**. Only **Caddy** is e
 
 The platform uses **automated deployments**:
 
-1. Code is pushed to `main`.
-2. **GitHub Actions** builds new Docker images.
-3. Images are pushed to **GitHub Container Registry (GHCR)**.
-4. The **`si-infra`** workflow connects to the VM and runs the following to restart services with the new versions:
+1. Code is pushed to `main` (via `KC-Dev` → `KC-Production` → PR to `main`, tested at each stage).
+2. **GitHub Actions** builds new Docker images and pushes them to **GitHub Container Registry (GHCR)**.
+3. The commit is tagged with a new version. Pulumi ignores a push to `main` whose version tag hasn't changed, so this tag bump has to be applied manually in the `si-infrastructure` Pulumi config.
+4. A separate PR is opened against **si-infrastructure** with the tag bump, and requires manual approval from the project supervisor before it can be merged — this approval step has repeatedly been the slowest part of the pipeline, since it depends on the supervisor's availability rather than CI.
+5. Once merged, the **`si-infra`** workflow connects to the VM and runs the following to restart services with the new versions:
    ```bash
    docker compose pull
    docker compose up -d
-  ```
+   ```
+
+Because of the approval bottleneck, the team moved from pushing each change to production individually to batching a sprint's changes into a single deployment (adopted in Sprint 3) — this doesn't remove the approval step, but reduces how often the team is blocked waiting on it.
 
 ### Rollback
 
@@ -101,7 +106,8 @@ This ensures versioned, repeatable rollbacks with no manual SSH intervention.
 | Limitation | Impact |
 |-----------|--------|
 | **Single VM deployment** | No horizontal scaling or redundancy — if the VM goes down, the whole platform is unavailable. |
-| **Manual Keycloak user provisioning** | User registration currently requires admin console access or API automation; no self-service sign-up yet. |
+| **Deployment approval bottleneck** | Shipping to `si-infrastructure` requires a manually-bumped Pulumi version tag and manual PR approval from the project supervisor, adding friction and delay to every release (see above). |
+| **Google SSO in testing mode** | App-driven self-service sign-up has existed since Sprint 1; Google SSO was added on top in Sprint 3 as an additional sign-in path, but Google OAuth is still in *testing* mode — only an allow-listed set of Google accounts can use it until the app passes Google's verification process. |
 | **Platform microservices tightly coupled** | Updates may require coordinated deployments; future refactor could improve modularity. |
 
 ---

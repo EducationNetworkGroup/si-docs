@@ -50,13 +50,10 @@ Contact your Project Manager or Team Lead for this value.
 
 ### Log into Pulumi
 
-You will need to log-in to pulumi to make changes directly, CI/CD pipelines are able to do this to deploy updates automatically:
+You will need to log-in to pulumi to make changes directly, CI/CD pipelines are able to do this to deploy updates automatically. Since the migration to GCP, the Pulumi state backend is a Cloud Storage bucket rather than S3:
 
 ```bash
-pulumi login s3://si-iac-state/si-pulumi/
-
-# IAM module
-pulumi login s3://si-iac-state/si-iam/
+pulumi login 'gs://si-iac-state'
 ```
 
 ---
@@ -119,5 +116,10 @@ pulumi destroy
 
 You're now set up to manage your infrastructure using Pulumi!
 
+---
+
+### Version Tags Matter
+
+Pulumi only picks up a new Docker image on `pulumi up` if the corresponding version tag in the stack config has also changed — pushing a commit to `main` without bumping the tag will be silently ignored, and the previous image keeps running. See [si-infrastructure: Deployment Approval Bottleneck](06-si-infrastructure.md#deployment-approval-bottleneck) for the current (manual, approval-gated) workflow this requires.
 
 ---

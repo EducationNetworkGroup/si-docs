@@ -21,7 +21,7 @@ This service is shared by multiple platform applications, so changes to **client
 | `caddy/` | Reverse proxy + HTTPS configuration for public access |
 | `scripts/` | Utility scripts (token generation, debugging) |
 | `docker-compose.yml` | Local Keycloak + PostgreSQL development environment |
-| `.github/workflows/` | CI/CD pipelines for automated builds + Helm releases |
+| `.github/workflows/` | CI/CD pipelines for automated builds and image publishing |
 | `Dockerfile` | Builds Keycloak image with the custom theme + realm configuration |
 
 > Helm is obsolete now as the live deployment was drastically simplified in the migration from AWS to GCP in 2025. Kubernetes was removed from the project in favour of a simple VM setup.
@@ -37,14 +37,17 @@ https://login.scienceisland.com
 
 This repository does **not** handle production deployment directly.
 
-Production deployment is managed in the **si-infrastructure** repository via CI/CD pipelines, which:
-- Build and publish the Keycloak container image
-- Apply Helm chart updates to the cluster
-- Manage rollout and versioning
+Production deployment is managed in the **si-infrastructure** repository, which builds and publishes the Keycloak container image (via GHCR) and runs it alongside the other services through Docker Compose on the GCP VM — Helm/Kubernetes is no longer used (see [si-infrastructure](06-si-infrastructure.md)).
 
-No manual SSH access or container restarts are required.
+Because Pulumi ignores a new commit to `main` unless its Docker image version tag has also changed, shipping a change from this repo currently requires a **second, manual step**: bump the version tag in the `si-infrastructure` Pulumi config, open a PR against `si-infrastructure`, and get it approved before the new image is actually deployed to the VM. This added approval step has been a recurring source of deployment delay since Sprint 2 — see [Deployment](../02-cloud-environment/02-deployment.md) for the full workflow.
 
 ---
+
+## Realm Roles & Google SSO
+
+Since Sprint 2, `realms/science-island.json` also carries the Realm Roles used for RBAC (`student`, `teacher`, `admin-teacher`, `admin`, `parent`) and, since Sprint 3, a Google identity provider entry for social login. See [Keycloak Configuration](../../02-tools-and-technologies/05-keycloak/03-configuration.md#roles) for the full role/resource matrix and current limitations (Google OAuth testing mode, role propagation delay).
+
+Google's Client ID/Secret are treated as production secrets — they're injected via Pulumi/Caddy rather than committed to the realm file. Local development uses short-lived, "burned" throwaway Google credentials instead.
 
 ## Environment Variables & Secrets (`.env`)
 
